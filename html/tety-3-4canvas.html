@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>胎儿发育</title>
+	<meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <meta name="viewport" content="initial-sacle=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+	<link type="text/css" href="../css/reset.css" rel="stylesheet">
+	<link type="text/css" href="../css/index.css" rel="stylesheet">
+</head> 
+<body>
+	<div class="sn-wraper">
+		<div class="bg-3-4mr">
+			<div class="sn-header clearfix">
+				<a href="#" class="sn-back"></a><a href="#" class="sn-home"></a>
+			</div>
+			<div class="kt02">
+			<canvas id="canvas1" style="height: 640; width:640;">对不起，您不支持画布，请升级浏览器！</canvas>
+			</div>
+			<div class="sn-btn2 tijiao1"><a href="#">提交本次检测结果</a></div>
+			</div>
+	</div>
+	<script type="text/javascript" >
+		//得到画布
+		var canvas = document.getElementById("canvas1");
+		//得到上下文
+		var ctx = canvas.getContext("2d");
+ 		var image = new Image();
+ 		image.src = "../image/c1.png";
+ 		image.onload = function(){
+ 			//图片加载完毕之后做的事情
+ 			var m = 0;
+ 			var n = 0;
+ 			var l = 0;
+ 			var t =	0;
+ 			var w = 80;
+ 			var h = 80;
+ 			var i = 1;
+ 				// 先清除画布上的图形
+ 			var clear =function(l,t){
+ 				ctx.clearRect(l, t, w, h);
+ 			} 
+ 			var draw = function(m,n,l,t,w,h){
+ 				ctx.drawImage(image, m , n , w , h , l , t , w , h)
+ 			};
+ 			draw();
+ 			setInterval(function(){
+ 				i++;
+ 				switch(i){
+ 					case 1:m = 0,n = 0,l = 198,t = 359,draw(m,n,l,t,w,h);
+ 					case 2:m = 0,n = 0,l = 353,t = 358,draw(m,n,l,t,w,h);
+ 					case 3:m = 79,n = 36,l = 41,t = 57,clear(l,t,w,h),draw(m,n,l,t,w,h);
+ 					case 4:m = 120,n = 0,l = 200,t = 100,draw(m,n,l,t,w,h);
+ 					case 5:m = 179,n = 0,l = 300,t = 100,draw(m,n,l,t,w,h);
+ 					case 6:m = 249,n = 0,l = 400,t = 100,draw(m,n,l,t,w,h);
+ 					case 7:m = 305,n = 0,l = 100,t = 100,draw(m,n,l,t,w,h);
+ 					case 8:m = 366,n = 0,l = 100,t = 100,draw(m,n,l,t,w,h);
+ 				}	
+ 			// setInterval(function(){
+ 			// 
+ 			// 	//再绘制新的
+ 			// 	m++;
+ 			 	 // if(i > 8){
+ 			// 	// 	m = 0;
+ 			// 	// }
+ 			// 	left +=3;
+ 				
+ 			},300);
+ 		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+html,body{
+  font-size: 10px;
+  font-family:"微软雅黑";
+  height:100%;
+  background: #ffe6f0;
+}
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0;
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+ol, ul, textarea, input, option, th, td {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+/*article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul, ol {
+  list-style-type: none;
+}
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none;
+}
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only;
+}
+fieldset, img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+a, textarea, input {
+  outline: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+}
+img {
+  border: none;
+  width:100%;
+}
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}
+@media only screen and (min-width: 375px){
+    html {
+        font-size: 11.75px!important;
+    }
+}
+@media only screen and (min-width: 414px){
+    html {
+        font-size: 13px!important;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 15px!important; 
+    }
+}
+@media only screen and (min-width: 569px){
+    html {
+        font-size: 18px!important; 
+    }
+}
+@media only screen and (min-width: 640px){
+    html {
+        font-size: 20px!important; 
+    }
+}
+/*在底部加了这些错误提示*/
+.toast{
+    position: fixed;
+    bottom: 10%;
+}
+
+.toast .msg{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+  
+    border-radius: 10px;
+    color: #fff;
+    padding: 0px 10px;
+    filter:alpha(opacity=50);  
+    -moz-opacity:0.5;  
+    -khtml-opacity: 0.5;  
+    opacity: 0.5; 
+}
+.toast .success{
+    background: #FF6ED1;
+}
+.toast .error{
+    background: #000;
+}
